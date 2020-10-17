@@ -1,0 +1,9 @@
+<div class="container mx-auto pt-12">
+  <%= simple_form_for @todo do |f| %>
+    <div class="md:w-2/3 mb-4">
+      <%= f.input :title, input_html: { class: 'main-input' } %>
+    </div>
+
+    <%= abymize(:todo_items, f) %>
+  <% end %>
+</div>

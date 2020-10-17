@@ -1,0 +1,5 @@
+<div class="md:w-2/3 mb-4">
+  <%= f.input :content, input_html: { class: 'main-input' } %>
+  <%= f.hidden_field :_destroy %>
+  <%= remove_association(content: 'remove item') %>
+</div>
