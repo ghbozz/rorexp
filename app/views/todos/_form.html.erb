@@ -1,0 +1,11 @@
+  <%= simple_form_for todo do |f| %>
+    <%= f.input :title, input_html: { class: 'main-input text-gray-700 text-base mb-8' } %>
+
+    <%= abymize(:todo_items, f) do |abyme| %> 
+      <%= abyme.records %>
+      <%= abyme.new_records %>
+      <%= add_association %>
+    <% end %>
+
+    <%= f.submit %>
+  <% end %>
