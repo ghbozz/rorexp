@@ -2,8 +2,10 @@
     <%= f.input :title, input_html: { class: 'main-input text-gray-700 text-base mb-8' } %>
 
     <%= abymize(:todo_items, f) do |abyme| %> 
-      <%= abyme.records %>
-      <%= abyme.new_records %>
+      <div class="w-full float-right mb-8">
+        <%= abyme.records(fields_html: { class: 'flex flex-wrap float-left md:w-1/4 sm:w-1/2' }) %>
+        <%= abyme.new_records(fields_html: { class: 'flex flex-wrap float-left md:w-1/4 sm:w-1/2' }) %>
+      </div>
       <%= add_association %>
     <% end %>
 
